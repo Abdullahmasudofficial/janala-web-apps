@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Wev App For Learning English</title>
+    <!-- ---------------font awesome cdn----------- -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-------------- google fonts ------------ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+     <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
+
+     <!---------- daisyui and tailwind link  ----------->
+     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+      <link rel="stylesheet" href="./style.css">
+
+
+</head>
+<body>
+
+
+<header>
+<div class=" md:navbar bg-base-100 shadow-sm">
+  <div class="navbar-start">
+    <div class="dropdown">
+      <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
+      </div>
+      <ul
+        tabindex="0"
+        class="space-y-5 menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+       <button class="btn btn-soft"> FAQ <i class="fa-solid fa-question"></i></button>
+      <button class="btn btn-soft "><i class="fa-solid fa-book-open"></i> Learn </button>
+      <button class="btn btn-soft "><i class="fa-solid fa-arrow-right-from-bracket"></i> LogOut </button>
+      </ul>
+    </div>
+    <a class="btn btn-ghost text-xl flex items-center">
+        <span>English</span>
+        <img class="w-8/12" src="./assets/logo.png" alt="">
+        <span class="bangla-font">জানালা</span></a>
+  </div>
+  <div class="navbar-end hidden lg:flex">
+    <ul class="menu menu-horizontal px-1 space-x-5">
+      <button class="btn btn-soft btn-primary"> FAQ <i class="fa-solid fa-question"></i></button>
+      <button class="btn btn-soft btn-primary"><i class="fa-solid fa-book-open"></i> Learn </button>
+      <button class="btn btn-soft btn-primary"><i class="fa-solid fa-arrow-right-from-bracket"></i> LogOut </button>
+    </ul>
+  </div>
+
+</div>
+</header>
+
+
+<section class="" >
+    <div class="flex-col-reverse w-10/12 mx-auto flex md:justify-between md:flex-row items-center container-box">
+        <div class="text-center md:text-left flex-1">
+            <h1 class="text-6xl mb-5 font-bold md:text-8xl"><span class="text-sky-500">English</span> is Easy!!</h1>
+            <p class="text-gray-600 bangla-font">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ</p>
+        </div>
+        <div class="flex-1">
+
+            <img src="./assets/hero-student.png" alt="">
+
+        </div>
+    </div>
+</section>
+
+
+<section class="mt-10">
+  <div class="mb-5 lesson-title">
+    <h1 class="text-center  text-4xl mb-5 font-bold md:text-5xl"><span class="text-sky-500">Let's </span> Learn Vocabularies</h1>
+  </div>
+  <div class="flex flex-wrap justify-center gap-5" id="lesson-section-cardlist">
+
+  </div>
+</section>
+
+    
+
+<!-------------- search section ----------- -->
+<section class="my-12 flex justify-center">
+  <div class="join">
+  <div>
+    <label class="input validator join-item">
+     <input id="search-input" class="outline-none" type="text" placeholder="Search Words" required />
+    </label>
+    <div class="validator-hint hidden">Enter valid email address</div>
+  </div>
+  <button id="search-btn" class="btn btn-primary ">Join</button>
+</div>
+</section>
+
+
+
+
+<div id="spinner" class="flex justify-center items-center my-10 hidden">
+<span  class="loading loading-spinner loading-xl"></span>
+</div>
+
+
+
+<section>
+  <div class="grid-cols-1 w-full md:w-10/12 mx-auto md:m-10 grid gap-5 md:grid-cols-3 bg-gray-100 p-20" id="word-section">
+
+
+
+
+                   
+    <div class="col-span-10 md:col-span-full text-center space-y-5">
+
+     
+      <h1 class="bangla-font text-gray-600">আপনি এখনো কোন Lesson Select করেননি।</h1>
+      <h1  class=" font-bold md:text-4xl bangla-font">একটি Lesson Select করুন।</h1>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<!-- Open the modal using ID.showModal() method -->
+<!-- <button class="btn" onclick="my_modal_1.showModal()">open modal</button> -->
+
+
+
+<dialog id="my_modal_1" class="modal">
+  <div class="modal-box">
+    <div id="deteils-container">
+
+
+      
+
+      
+
+    </div>
+    <div class="flex justify-start modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+             <button class="bangla-font font-normal text-lg btn btn-primary"><i class="fa-solid fa-arrow-right-from-bracket"></i> Complete Learning </button>
+      </div>
+      </form>
+    </div>
+  </div>
+</dialog>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="./script/lesson.js"></script>
+</body>
+</html>
