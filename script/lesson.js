@@ -95,21 +95,21 @@ const displayTheWordDeteils=(word)=>{
 
 <div class=" rounded-xl space-y-5  bangla-">
 
-  <div class="space-y-5 p-5  mx-4 border border-gray-100 rounded-xl">
-            <h1 class="font-bold text-4xl">${word.word}(<i class="fa-solid fa-microphone"></i>: ${word.pronunciation})</h1>
+  <div class="space-y-5 p-2 md:p-5  mx-4 border border-gray-100 rounded-xl">
+            <h1 class="text-2xl font-bold md:text-4xl">${word.word}(<i class="fa-solid fa-microphone"></i>: ${word.pronunciation})</h1>
         <div>
-           <h3 class="text-2xl font-semibold">Meaning</h3>
-           <h3 class="text-2xl bangla-font font-medium">${word.meaning}</h3>
+           <h3 class="md:text-2xl font-semibold">Meaning</h3>
+           <h3 class="md:text-2xl bangla-font font-medium">${word.meaning}</h3>
         </div>
 
 
        <div>
-         <h2 class="text-2xl font-semibold">Example</h2>
-         <p class="text-gray-700 text-xl">${word.sentence}</p>
+         <h2 class=" md:text-2xl font-semibold">Example</h2>
+         <p class="text-gray-700 md:text-xl">${word.sentence}</p>
        </div>
 
 
-        <p class="bangla-font text-2xl font-semibold" >সমার্থক শব্দ গুলো</p>
+        <p class="bangla-font md:text-2xl font-semibold" >সমার্থক শব্দ গুলো</p>
 
         <div class="flex flex-col md:flex-row gap-x-2 items-center text-center text-gray-600 "> 
           ${createlements(word.synonyms)}
