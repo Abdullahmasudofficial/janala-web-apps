@@ -111,7 +111,7 @@ const displayTheWordDeteils=(word)=>{
 
         <p class="bangla-font text-2xl font-semibold" >সমার্থক শব্দ গুলো</p>
 
-        <div class="flex gap-x-2 items-center text-center text-gray-600 "> 
+        <div class="flex flex-col md:flex-row gap-x-2 items-center text-center text-gray-600 "> 
           ${createlements(word.synonyms)}
         
         </div>
